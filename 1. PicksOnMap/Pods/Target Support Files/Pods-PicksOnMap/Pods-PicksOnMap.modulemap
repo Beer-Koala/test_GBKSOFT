@@ -1,0 +1,6 @@
+framework module Pods_PicksOnMap {
+  umbrella header "Pods-PicksOnMap-umbrella.h"
+
+  export *
+  module * { export * }
+}

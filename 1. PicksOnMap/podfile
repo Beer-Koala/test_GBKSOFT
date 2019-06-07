@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '11.0'
+use_frameworks!
+
+target 'PicksOnMap' do
+
+pod 'SwiftLint'
+pod 'GoogleSignIn'
+pod 'Firebase/Analytics'
+pod 'Firebase/Auth'
+
+end

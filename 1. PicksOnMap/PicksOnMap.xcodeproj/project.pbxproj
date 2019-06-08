@@ -16,6 +16,10 @@
 		FDBDEECD22A9B080007FCBB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDBDEECB22A9B080007FCBB1 /* Main.storyboard */; };
 		FDBDEECF22A9B081007FCBB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDBDEECE22A9B081007FCBB1 /* Assets.xcassets */; };
 		FDBDEED222A9B081007FCBB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDBDEED022A9B081007FCBB1 /* LaunchScreen.storyboard */; };
+		FDCDCE2722AC2D920084A5E5 /* Pick.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDCE2622AC2D920084A5E5 /* Pick.swift */; };
+		FDCDCE2922AC34240084A5E5 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDCE2822AC34240084A5E5 /* MapViewController.swift */; };
+		FDCDCE2B22AC46C50084A5E5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCDCE2A22AC46C50084A5E5 /* MapKit.framework */; };
+		FDCDCE2D22AC6D970084A5E5 /* UIAlertController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDCE2C22AC6D970084A5E5 /* UIAlertController+extension.swift */; };
 		FDFC01AF22A9B9D000A8F021 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FDFC01AE22A9B9D000A8F021 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +37,10 @@
 		FDBDEECE22A9B081007FCBB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDBDEED122A9B081007FCBB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDBDEED322A9B081007FCBB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDCDCE2622AC2D920084A5E5 /* Pick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pick.swift; sourceTree = "<group>"; };
+		FDCDCE2822AC34240084A5E5 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		FDCDCE2A22AC46C50084A5E5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		FDCDCE2C22AC6D970084A5E5 /* UIAlertController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+extension.swift"; sourceTree = "<group>"; };
 		FDFC01AE22A9B9D000A8F021 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDCDCE2B22AC46C50084A5E5 /* MapKit.framework in Frameworks */,
 				1FC864B8659A82C884CE0C44 /* Pods_PicksOnMap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,6 +69,7 @@
 		7C1AC89E93044E4EF7055306 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FDCDCE2A22AC46C50084A5E5 /* MapKit.framework */,
 				A4DB3C8A23166C4CA244FE3F /* Pods_PicksOnMap.framework */,
 			);
 			name = Frameworks;
@@ -90,6 +100,7 @@
 				FDCDCE2422AB20420084A5E5 /* ViewControllers */,
 				FDCDCE2322AB20360084A5E5 /* Model */,
 				FDBDEEC722A9B07F007FCBB1 /* AppDelegate.swift */,
+				FDCDCE2C22AC6D970084A5E5 /* UIAlertController+extension.swift */,
 				FDBDEECB22A9B080007FCBB1 /* Main.storyboard */,
 				FDBDEECE22A9B081007FCBB1 /* Assets.xcassets */,
 				FDBDEED022A9B081007FCBB1 /* LaunchScreen.storyboard */,
@@ -103,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				FDB3A05C22AB197B003FF414 /* LoginModel.swift */,
+				FDCDCE2622AC2D920084A5E5 /* Pick.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -111,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				FDBDEEC922A9B07F007FCBB1 /* LoginViewController.swift */,
+				FDCDCE2822AC34240084A5E5 /* MapViewController.swift */,
 				FDB3A05622AA9FCA003FF414 /* ProfileViewController.swift */,
 			);
 			path = ViewControllers;
@@ -137,6 +150,7 @@
 				FDBDEEC222A9B07F007FCBB1 /* Resources */,
 				F974E4C9F2CF78535B388560 /* [CP] Embed Pods Frameworks */,
 				53D429AAAA882480BA66103C /* [CP] Copy Pods Resources */,
+				FDCDCE2E22AC6E490084A5E5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -159,6 +173,11 @@
 				TargetAttributes = {
 					FDBDEEC322A9B07F007FCBB1 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -267,6 +286,23 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PicksOnMap/Pods-PicksOnMap-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FDCDCE2E22AC6E490084A5E5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -274,11 +310,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDCDCE2722AC2D920084A5E5 /* Pick.swift in Sources */,
 				FDB3A05D22AB197B003FF414 /* LoginModel.swift in Sources */,
+				FDCDCE2D22AC6D970084A5E5 /* UIAlertController+extension.swift in Sources */,
 				FDB3A05B22AB184E003FF414 /* ShowingAlert.swift in Sources */,
 				FDB3A05722AA9FCA003FF414 /* ProfileViewController.swift in Sources */,
 				FDBDEECA22A9B07F007FCBB1 /* LoginViewController.swift in Sources */,
 				FDBDEEC822A9B07F007FCBB1 /* AppDelegate.swift in Sources */,
+				FDCDCE2922AC34240084A5E5 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

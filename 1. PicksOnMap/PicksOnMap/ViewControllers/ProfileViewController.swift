@@ -17,7 +17,7 @@ class ProfileViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
+
     @IBAction func logout(_ sender: Any) {
         let firebaseAuth = Auth.auth()
         do {

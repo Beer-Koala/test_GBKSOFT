@@ -23,7 +23,7 @@ class LoginViewController: UIViewController {
         GIDSignIn.sharedInstance()?.uiDelegate = self
         GIDSignIn.sharedInstance()?.delegate = loginModel
 
-        Auth.auth().addStateDidChangeListener() { auth, user in
+        Auth.auth().addStateDidChangeListener { _, user in
             if user != nil {
                 self.performSegue(withIdentifier: "toMainTabBarVC", sender: self)
             } else {

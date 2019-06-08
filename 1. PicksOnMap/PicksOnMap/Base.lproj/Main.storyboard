@@ -84,18 +84,32 @@
         <!--Карта-->
         <scene sceneID="Uj9-fv-qyd">
             <objects>
-                <viewController id="9x7-8l-HVO" sceneMemberID="viewController">
+                <viewController id="9x7-8l-HVO" customClass="MapViewController" customModule="PicksOnMap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x5f-JT-fzP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ieP-M2-Rcg">
+                                <rect key="frame" x="0.0" y="44" width="375" height="685"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0ik-S0-85H" firstAttribute="bottom" secondItem="ieP-M2-Rcg" secondAttribute="bottom" id="6HG-G6-kU9"/>
+                            <constraint firstItem="0ik-S0-85H" firstAttribute="trailing" secondItem="ieP-M2-Rcg" secondAttribute="trailing" id="9v6-6H-GJK"/>
+                            <constraint firstItem="ieP-M2-Rcg" firstAttribute="top" secondItem="0ik-S0-85H" secondAttribute="top" id="WlZ-9d-CR5"/>
+                            <constraint firstItem="ieP-M2-Rcg" firstAttribute="leading" secondItem="0ik-S0-85H" secondAttribute="leading" id="csd-Pg-Ovz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="0ik-S0-85H"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Карта" id="UjM-sd-NJu"/>
+                    <connections>
+                        <outlet property="mapView" destination="ieP-M2-Rcg" id="Orv-x5-ee0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4aM-gs-2ST" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="961" y="881"/>
+            <point key="canvasLocation" x="960.79999999999995" y="880.78817733990149"/>
         </scene>
         <!--Список-->
         <scene sceneID="BDT-OW-ehl">

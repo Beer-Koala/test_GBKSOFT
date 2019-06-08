@@ -29,7 +29,7 @@ extension LoginModel: GIDSignInDelegate {
         guard let authentication = user.authentication else { return }
         let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
 
-        Auth.auth().signIn(with: credential) { (authResult, error) in
+        Auth.auth().signIn(with: credential) { (_, error) in
             if let error = error {
                 self.delegate?.showAlert(with: "Authorization", and: "Error with login")
                 print(error)

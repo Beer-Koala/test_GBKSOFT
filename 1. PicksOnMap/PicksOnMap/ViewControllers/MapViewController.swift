@@ -14,7 +14,7 @@ class MapViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
     var presenter: PicksPresenter!
-    var currentPick: Pick?
+    var currentPick: Int?
     //let locationManager = CLLocationManager()
 
     override func viewDidLoad() {
@@ -32,7 +32,7 @@ class MapViewController: UIViewController {
         //checkLocationAuthorizationStatus()
 
         if let currentPick = currentPick {
-            mapView.selectAnnotation(currentPick, animated: true)
+            mapView.selectAnnotation(presenter.picks[currentPick], animated: true)
         }
     }
 
@@ -63,10 +63,17 @@ extension MapViewController: MKMapViewDelegate {
         } else {
             view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
             view.canShowCallout = true
-            view.calloutOffset = CGPoint(x: -5, y: 5)
+            //view.calloutOffset = CGPoint(x: -5, y: 5)
             view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
         }
+        addTapGestureRecognizer(to: view)
         return view
+    }
+
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+//        if mapView.selectedAnnotations.contains(where: { $0 === view.annotation }) {
+//            mapView.deselectAnnotation(view.annotation, animated: true)
+//        }
     }
 }
 
@@ -98,4 +105,14 @@ extension MapViewController: LongPressable {
             strongSelf.presenter.addNewPick(name: text, coordinate: coordinate)
         }
     }
+}
+
+extension MapViewController: Pressable {
+    func handleTap(gestureReconizer: UITapGestureRecognizer) {
+        if let annotation = (gestureReconizer.view as? MKAnnotationView)?.annotation,
+            mapView.annotations.contains(where: { $0 === annotation }) {
+            mapView.deselectAnnotation(annotation, animated: true)
+        }
+    }
+
 }

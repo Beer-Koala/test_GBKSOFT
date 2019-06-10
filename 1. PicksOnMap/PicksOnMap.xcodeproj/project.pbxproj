@@ -24,6 +24,7 @@
 		FDCDCE3222ADB1520084A5E5 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDCE3122ADB1520084A5E5 /* ListTableViewController.swift */; };
 		FDCDCE3422ADB28D0084A5E5 /* PicksPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDCE3322ADB28D0084A5E5 /* PicksPresenter.swift */; };
 		FDCDCE3622ADC2140084A5E5 /* LongPressable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDCE3522ADC2140084A5E5 /* LongPressable.swift */; };
+		FDCDCE3822AE792C0084A5E5 /* Pressable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDCE3722AE792C0084A5E5 /* Pressable.swift */; };
 		FDFC01AF22A9B9D000A8F021 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FDFC01AE22A9B9D000A8F021 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		FDCDCE3122ADB1520084A5E5 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		FDCDCE3322ADB28D0084A5E5 /* PicksPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicksPresenter.swift; sourceTree = "<group>"; };
 		FDCDCE3522ADC2140084A5E5 /* LongPressable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressable.swift; sourceTree = "<group>"; };
+		FDCDCE3722AE792C0084A5E5 /* Pressable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pressable.swift; sourceTree = "<group>"; };
 		FDFC01AE22A9B9D000A8F021 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				FDCDCE3522ADC2140084A5E5 /* LongPressable.swift */,
+				FDCDCE3722AE792C0084A5E5 /* Pressable.swift */,
 				FDB3A05A22AB184E003FF414 /* ShowingAlert.swift */,
 			);
 			path = Protocols;
@@ -331,6 +334,7 @@
 				FDCDCE3222ADB1520084A5E5 /* ListTableViewController.swift in Sources */,
 				FDCDCE3422ADB28D0084A5E5 /* PicksPresenter.swift in Sources */,
 				FDB3A05B22AB184E003FF414 /* ShowingAlert.swift in Sources */,
+				FDCDCE3822AE792C0084A5E5 /* Pressable.swift in Sources */,
 				FDB3A05722AA9FCA003FF414 /* ProfileViewController.swift in Sources */,
 				FDCDCE3022ADAEEF0084A5E5 /* PickTableViewCell.swift in Sources */,
 				FDBDEECA22A9B07F007FCBB1 /* LoginViewController.swift in Sources */,

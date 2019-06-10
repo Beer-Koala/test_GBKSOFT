@@ -23,4 +23,15 @@ extension UIAlertController {
         alertController.addAction(cancelAction)
         viewController.present(alertController, animated: true, completion: nil)
     }
+
+    class func askToDo(in viewController: UIViewController, title: String, completion: @escaping () -> Void) {
+        let alertController = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+        let confirmAction = UIAlertAction(title: "Да", style: .default) { _ in
+            completion()
+        }
+        alertController.addAction(confirmAction)
+        let cancelAction = UIAlertAction(title: "Нет", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        viewController.present(alertController, animated: true, completion: nil)
+    }
 }

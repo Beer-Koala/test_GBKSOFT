@@ -114,18 +114,83 @@
         <!--Список-->
         <scene sceneID="BDT-OW-ehl">
             <objects>
-                <viewController id="TzL-Fo-fd5" sceneMemberID="viewController">
+                <viewController id="TzL-Fo-fd5" customClass="ListTableViewController" customModule="PicksOnMap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7P8-Kk-T6c">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fqj-hE-tcg">
+                                <rect key="frame" x="0.0" y="44" width="375" height="685"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="pickCell" rowHeight="70" id="t4C-Zt-md1" customClass="PickTableViewCell" customModule="PicksOnMap" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="t4C-Zt-md1" id="S2X-UF-vCk">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="69.666666666666671"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pde-SW-erA">
+                                                    <rect key="frame" x="26" y="6" width="34" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lontitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2d7-oW-hPU">
+                                                    <rect key="frame" x="41" y="28" width="65" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V87-bT-TWF">
+                                                    <rect key="frame" x="41" y="45" width="57" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="V87-bT-TWF" firstAttribute="top" secondItem="S2X-UF-vCk" secondAttribute="top" constant="45" id="3C6-3J-35d"/>
+                                                <constraint firstItem="2d7-oW-hPU" firstAttribute="top" secondItem="S2X-UF-vCk" secondAttribute="top" constant="28" id="5Mr-sM-kUJ"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="V87-bT-TWF" secondAttribute="trailing" constant="20" symbolic="YES" id="7j8-NR-I11"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Pde-SW-erA" secondAttribute="trailing" constant="20" symbolic="YES" id="MF4-Nh-5sG"/>
+                                                <constraint firstItem="V87-bT-TWF" firstAttribute="leading" secondItem="S2X-UF-vCk" secondAttribute="leading" constant="41" id="NNU-LL-M5x"/>
+                                                <constraint firstItem="Pde-SW-erA" firstAttribute="leading" secondItem="S2X-UF-vCk" secondAttribute="leading" constant="26" id="a4a-03-J8m"/>
+                                                <constraint firstItem="Pde-SW-erA" firstAttribute="top" secondItem="S2X-UF-vCk" secondAttribute="top" constant="6" id="hYx-m1-RjI"/>
+                                                <constraint firstItem="2d7-oW-hPU" firstAttribute="leading" secondItem="S2X-UF-vCk" secondAttribute="leading" constant="41" id="kze-x7-2Yc"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2d7-oW-hPU" secondAttribute="trailing" constant="20" symbolic="YES" id="sz4-x6-nvv"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="latitudeLabel" destination="V87-bT-TWF" id="p9E-c4-tBW"/>
+                                            <outlet property="longitudeLabel" destination="2d7-oW-hPU" id="5mb-uw-iST"/>
+                                            <outlet property="titleLabel" destination="Pde-SW-erA" id="5ro-gu-9aR"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="TzL-Fo-fd5" id="Z8E-I7-WFU"/>
+                                    <outlet property="delegate" destination="TzL-Fo-fd5" id="PCQ-ZP-fVF"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hZf-ao-mYz" firstAttribute="trailing" secondItem="Fqj-hE-tcg" secondAttribute="trailing" id="10w-bg-v1x"/>
+                            <constraint firstItem="Fqj-hE-tcg" firstAttribute="top" secondItem="hZf-ao-mYz" secondAttribute="top" id="6UW-u3-5Up"/>
+                            <constraint firstItem="hZf-ao-mYz" firstAttribute="bottom" secondItem="Fqj-hE-tcg" secondAttribute="bottom" id="bHG-aJ-W5m"/>
+                            <constraint firstItem="Fqj-hE-tcg" firstAttribute="leading" secondItem="hZf-ao-mYz" secondAttribute="leading" id="oON-hR-PZS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hZf-ao-mYz"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Список" id="fWd-Eu-qAs"/>
+                    <connections>
+                        <outlet property="tableView" destination="Fqj-hE-tcg" id="YX9-00-IJI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bzc-En-CX6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="102" y="881"/>
+            <point key="canvasLocation" x="101.59999999999999" y="880.78817733990149"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="j8D-Er-U3i">

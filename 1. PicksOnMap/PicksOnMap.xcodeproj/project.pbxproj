@@ -25,6 +25,7 @@
 		FDCDCE3422ADB28D0084A5E5 /* PicksPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDCE3322ADB28D0084A5E5 /* PicksPresenter.swift */; };
 		FDCDCE3622ADC2140084A5E5 /* LongPressable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDCE3522ADC2140084A5E5 /* LongPressable.swift */; };
 		FDCDCE3822AE792C0084A5E5 /* Pressable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDCE3722AE792C0084A5E5 /* Pressable.swift */; };
+		FDCDCE3A22B233E50084A5E5 /* ClusterAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDCE3922B233E50084A5E5 /* ClusterAnnotationView.swift */; };
 		FDFC01AF22A9B9D000A8F021 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FDFC01AE22A9B9D000A8F021 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		FDCDCE3322ADB28D0084A5E5 /* PicksPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicksPresenter.swift; sourceTree = "<group>"; };
 		FDCDCE3522ADC2140084A5E5 /* LongPressable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressable.swift; sourceTree = "<group>"; };
 		FDCDCE3722AE792C0084A5E5 /* Pressable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pressable.swift; sourceTree = "<group>"; };
+		FDCDCE3922B233E50084A5E5 /* ClusterAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterAnnotationView.swift; sourceTree = "<group>"; };
 		FDFC01AE22A9B9D000A8F021 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +112,7 @@
 				FDCDCE2422AB20420084A5E5 /* ViewControllers */,
 				FDCDCE2322AB20360084A5E5 /* Model */,
 				FDBDEEC722A9B07F007FCBB1 /* AppDelegate.swift */,
+				FDCDCE3922B233E50084A5E5 /* ClusterAnnotationView.swift */,
 				FDCDCE2C22AC6D970084A5E5 /* UIAlertController+extension.swift */,
 				FDBDEECB22A9B080007FCBB1 /* Main.storyboard */,
 				FDCDCE2F22ADAEEF0084A5E5 /* PickTableViewCell.swift */,
@@ -190,7 +193,7 @@
 						CreatedOnToolsVersion = 10.2.1;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -338,6 +341,7 @@
 				FDB3A05722AA9FCA003FF414 /* ProfileViewController.swift in Sources */,
 				FDCDCE3022ADAEEF0084A5E5 /* PickTableViewCell.swift in Sources */,
 				FDBDEECA22A9B07F007FCBB1 /* LoginViewController.swift in Sources */,
+				FDCDCE3A22B233E50084A5E5 /* ClusterAnnotationView.swift in Sources */,
 				FDBDEEC822A9B07F007FCBB1 /* AppDelegate.swift in Sources */,
 				FDCDCE2922AC34240084A5E5 /* MapViewController.swift in Sources */,
 			);

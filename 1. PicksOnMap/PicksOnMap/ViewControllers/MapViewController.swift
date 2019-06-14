@@ -14,7 +14,7 @@ class MapViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
     var presenter: PicksPresenter!
-    var currentPick: Int?
+    var needCenter: NeedCenterState = .none
     let locationManager = CLLocationManager()
 
     override func viewDidLoad() {
@@ -33,24 +33,23 @@ class MapViewController: UIViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
+        if case .none = needCenter {
+            needCenter = .toCurrentLocation
+        }
         checkLocationAuthorizationStatus()
-//        if CLLocationManager.locationServicesEnabled() {
-//            locationManager.requestLocation()
-//        }
     }
 
     func checkLocationAuthorizationStatus() {
         mapView.showsUserLocation = true
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
-
-            //centerMap(on: mapView.userLocation.coordinate)
+            // ok
         } else {
             locationManager.requestWhenInUseAuthorization()
         }
     }
 
     override func viewDidDisappear(_ animated: Bool) {
-        currentPick = nil // must clear even if not loaded
+        needCenter = .none // must clear even if not loaded
     }
 }
 
@@ -81,8 +80,9 @@ extension MapViewController: MKMapViewDelegate {
     }
 
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        guard let coordinate = (view as? ClusterAnnotationView)?.annotation?.coordinate else { return }
-        centerMap(on: coordinate)
+        if let coordinate = (view as? ClusterAnnotationView)?.annotation?.coordinate {
+            centerMap(on: coordinate)
+        }
     }
 
     private func centerMap(on coordinate: CLLocationCoordinate2D) {
@@ -98,16 +98,16 @@ extension MapViewController: PicksViewer {
             mapView.addAnnotation(pick)
         }
 
-        if let currentPick = currentPick {
-            guard presenter.picks.count > currentPick else { return }
+        if case .toPick(let pick) = needCenter {
 
-            let pick = presenter.picks[currentPick]
+            guard let pick = presenter.picks.first(where: { $0.title == pick.title }) else { return }
+
             centerMap(on: pick.coordinate)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                self.mapView.selectAnnotation(self.presenter.picks[currentPick], animated: true)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
+                self.mapView.selectAnnotation(pick, animated: true)
             }
 
-            self.currentPick = nil
+            self.needCenter = .none
         }
     }
 
@@ -143,20 +143,26 @@ extension MapViewController: Pressable {
 }
 
 extension MapViewController: CLLocationManagerDelegate {
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if currentPick == nil,
-            let coordinate = locations.first?.coordinate {
-            centerMap(on: coordinate)
-        }
-    }
+    //    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    //        if case .toCurrentLocation = needCenter,
+    //            let coordinate = locations.first?.coordinate {
+    //            centerMap(on: coordinate)
+    //        }
+    //    }
 
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        //requestLocation() // I think app dont need this
+        //requestLocation() //!!! I think app dont need this
     }
 
-//    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
-//        if currentPick == nil {
-//            centerMap(on: userLocation.coordinate)
-//        }
-//    }
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+        if case .toCurrentLocation = needCenter {
+            centerMap(on: userLocation.coordinate)
+        }
+    }
+}
+
+enum NeedCenterState {
+    case none
+    case toPick(pick: Pick)
+    case toCurrentLocation
 }

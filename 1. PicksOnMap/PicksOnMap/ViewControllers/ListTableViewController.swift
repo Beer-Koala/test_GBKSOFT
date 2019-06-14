@@ -40,7 +40,7 @@ extension ListTableViewController: UITableViewDelegate {
         guard let viewControllers = tabBarController?.viewControllers else { return }
         for viewController in viewControllers {
             if let mapViewController = viewController as? MapViewController {
-                mapViewController.currentPick = indexPath.row
+                mapViewController.needCenter = .toPick(pick: presenter.picks[indexPath.row])
                 tabBarController?.selectedViewController = mapViewController
                 break
             }

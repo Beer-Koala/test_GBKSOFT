@@ -8,11 +8,12 @@
 
 import Foundation
 import FirebaseDatabase
+import FirebaseAuth
 import MapKit
 
 class PicksPresenter {
     var picks: [Pick] = []
-    let ref = Database.database().reference()//withPath: "picksonmap")
+    let ref = Database.database().reference(withPath: Auth.auth().currentUser?.uid ?? "0")
     var viewer: PicksViewer
 
     init(viewer: PicksViewer) {

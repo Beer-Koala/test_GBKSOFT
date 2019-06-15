@@ -52,7 +52,7 @@ class MapViewController: UIViewController {
     func checkLocationAuthorizationStatus() {
         mapView.showsUserLocation = true
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
-            // ok
+            //locationManager.startUpdatingLocation()//ok
         } else {
             locationManager.requestWhenInUseAuthorization()
         }

@@ -26,9 +26,9 @@ class Pick: NSObject, MKAnnotation {
     init?(with snapshot: DataSnapshot) {
         guard
             let value = snapshot.value as? [String: AnyObject],
-            let title = value["title"] as? String,
-            let latitude = value["latitude"] as? Double,
-            let longitude = value["longitude"] as? Double else {
+            let title = value[TextConstants.titleText.rawValue] as? String,
+            let latitude = value[TextConstants.latitudeText.rawValue] as? Double,
+            let longitude = value[TextConstants.longitudeText.rawValue] as? Double else {
                 return nil
         }
 
@@ -39,10 +39,18 @@ class Pick: NSObject, MKAnnotation {
 
     func toAnyObject() -> Any {
         return [
-            "title": title ?? "",
-            "latitude": coordinate.latitude,
-            "longitude": coordinate.longitude
+            TextConstants.titleText.rawValue: title ?? String.empty,
+            TextConstants.latitudeText.rawValue: coordinate.latitude,
+            TextConstants.longitudeText.rawValue: coordinate.longitude
         ]
     }
 
+}
+
+extension Pick {
+    enum TextConstants: String {
+        case titleText = "title"
+        case latitudeText = "latitude"
+        case longitudeText = "longitude"
+    }
 }

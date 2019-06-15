@@ -21,7 +21,7 @@ class LoginModel: NSObject {
 extension LoginModel: GIDSignInDelegate {
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
         if let error = error {
-            delegate?.showAlert(with: "Google", and: "Error with login")
+            delegate?.show(error: AppError.googleAuthError)
             print(error)
             return
         }
@@ -31,17 +31,12 @@ extension LoginModel: GIDSignInDelegate {
 
         Auth.auth().signIn(with: credential) { (_, error) in
             if let error = error {
-                self.delegate?.showAlert(with: "Authorization", and: "Error with login")
+                self.delegate?.show(error: AppError.authError)
                 print(error)
                 return
             }
         }
     }
-
-//    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
-//        // Perform any operations when the user disconnects from app here.
-//        // ...
-//    }
 }
 
 protocol LoginModelDelegate: AnyObject, ShowingAlert {

@@ -15,7 +15,6 @@ import UIKit
 extension LongPressable {
     func addLongPressGesturerecognizer(to view: UIView) {
         let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress))
-        //longPressRecognizer.delaysTouchesBegan = true //!!!
         view.addGestureRecognizer(longPressRecognizer)
     }
 }

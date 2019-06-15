@@ -17,10 +17,9 @@ class ClusterAnnotationView: MKAnnotationView {
     }
 
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
     }
 
-    /// - Tag: CustomCluster
     override func prepareForDisplay() {
         super.prepareForDisplay()
 
@@ -32,7 +31,7 @@ class ClusterAnnotationView: MKAnnotationView {
     private func drawCount(_ count: Int) -> UIImage {
         let renderer = UIGraphicsImageRenderer(size: CGSize(width: 40, height: 40))
         return renderer.image { _ in
-            // Fill full circle with wholeColor
+            // Fill full circle with red color
             UIColor.red.setFill()
             UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 40, height: 40)).fill()
 

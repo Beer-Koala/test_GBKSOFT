@@ -12,6 +12,8 @@ import FirebaseAuth
 
 class LoginViewController: UIViewController {
 
+    static let identifierToMainTabBarVC = "toMainTabBarVC"
+
     @IBOutlet weak var signWithGoogleButton: GIDSignInButton!
     var loginModel: LoginModel!
 
@@ -25,7 +27,7 @@ class LoginViewController: UIViewController {
 
         Auth.auth().addStateDidChangeListener { _, user in
             if user != nil {
-                self.performSegue(withIdentifier: "toMainTabBarVC", sender: self)
+                self.performSegue(withIdentifier: LoginViewController.identifierToMainTabBarVC, sender: self)
             } else {
                 self.dismiss(animated: true, completion: nil)
             }
@@ -33,8 +35,10 @@ class LoginViewController: UIViewController {
     }
 }
 
+// MARK: GIDSignInUIDelegate
 extension LoginViewController: GIDSignInUIDelegate {
 }
 
+// MARK: LoginModelDelegate
 extension LoginViewController: LoginModelDelegate {
 }

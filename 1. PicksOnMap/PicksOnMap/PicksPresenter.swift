@@ -13,7 +13,7 @@ import MapKit
 
 class PicksPresenter {
     var picks: [Pick] = []
-    let ref = Database.database().reference(withPath: Auth.auth().currentUser?.uid ?? "0")
+    let ref = Database.database().reference(withPath: Auth.auth().currentUser?.uid ?? String.zeroText)
     var viewer: PicksViewer
 
     init(viewer: PicksViewer) {

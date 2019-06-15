@@ -26,6 +26,8 @@
 		FDCDCE3622ADC2140084A5E5 /* LongPressable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDCE3522ADC2140084A5E5 /* LongPressable.swift */; };
 		FDCDCE3822AE792C0084A5E5 /* Pressable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDCE3722AE792C0084A5E5 /* Pressable.swift */; };
 		FDCDCE3A22B233E50084A5E5 /* ClusterAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDCE3922B233E50084A5E5 /* ClusterAnnotationView.swift */; };
+		FDCDCE3D22B58C330084A5E5 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDCE3C22B58C330084A5E5 /* AppError.swift */; };
+		FDCDCE3F22B591C80084A5E5 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDCE3E22B591C80084A5E5 /* String+Extension.swift */; };
 		FDFC01AF22A9B9D000A8F021 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FDFC01AE22A9B9D000A8F021 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +55,8 @@
 		FDCDCE3522ADC2140084A5E5 /* LongPressable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressable.swift; sourceTree = "<group>"; };
 		FDCDCE3722AE792C0084A5E5 /* Pressable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pressable.swift; sourceTree = "<group>"; };
 		FDCDCE3922B233E50084A5E5 /* ClusterAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterAnnotationView.swift; sourceTree = "<group>"; };
+		FDCDCE3C22B58C330084A5E5 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		FDCDCE3E22B591C80084A5E5 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		FDFC01AE22A9B9D000A8F021 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,14 +112,14 @@
 		FDBDEEC622A9B07F007FCBB1 /* PicksOnMap */ = {
 			isa = PBXGroup;
 			children = (
+				FDBDEEC722A9B07F007FCBB1 /* AppDelegate.swift */,
+				FDCDCE3C22B58C330084A5E5 /* AppError.swift */,
 				FDCDCE2522AB20570084A5E5 /* Protocols */,
+				FDCDCE3322ADB28D0084A5E5 /* PicksPresenter.swift */,
 				FDCDCE2422AB20420084A5E5 /* ViewControllers */,
 				FDCDCE2322AB20360084A5E5 /* Model */,
-				FDBDEEC722A9B07F007FCBB1 /* AppDelegate.swift */,
-				FDCDCE3922B233E50084A5E5 /* ClusterAnnotationView.swift */,
-				FDCDCE2C22AC6D970084A5E5 /* UIAlertController+extension.swift */,
+				FDCDCE3B22B5880C0084A5E5 /* Extensions */,
 				FDBDEECB22A9B080007FCBB1 /* Main.storyboard */,
-				FDCDCE2F22ADAEEF0084A5E5 /* PickTableViewCell.swift */,
 				FDBDEECE22A9B081007FCBB1 /* Assets.xcassets */,
 				FDBDEED022A9B081007FCBB1 /* LaunchScreen.storyboard */,
 				FDBDEED322A9B081007FCBB1 /* Info.plist */,
@@ -137,10 +141,9 @@
 			isa = PBXGroup;
 			children = (
 				FDBDEEC922A9B07F007FCBB1 /* LoginViewController.swift */,
-				FDCDCE2822AC34240084A5E5 /* MapViewController.swift */,
+				FDCDCE4022B598C90084A5E5 /* ListVC */,
+				FDCDCE4222B598DE0084A5E5 /* MapVC */,
 				FDB3A05622AA9FCA003FF414 /* ProfileViewController.swift */,
-				FDCDCE3122ADB1520084A5E5 /* ListTableViewController.swift */,
-				FDCDCE3322ADB28D0084A5E5 /* PicksPresenter.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -153,6 +156,33 @@
 				FDB3A05A22AB184E003FF414 /* ShowingAlert.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FDCDCE3B22B5880C0084A5E5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FDCDCE2C22AC6D970084A5E5 /* UIAlertController+extension.swift */,
+				FDCDCE3E22B591C80084A5E5 /* String+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FDCDCE4022B598C90084A5E5 /* ListVC */ = {
+			isa = PBXGroup;
+			children = (
+				FDCDCE3122ADB1520084A5E5 /* ListTableViewController.swift */,
+				FDCDCE2F22ADAEEF0084A5E5 /* PickTableViewCell.swift */,
+			);
+			path = ListVC;
+			sourceTree = "<group>";
+		};
+		FDCDCE4222B598DE0084A5E5 /* MapVC */ = {
+			isa = PBXGroup;
+			children = (
+				FDCDCE2822AC34240084A5E5 /* MapViewController.swift */,
+				FDCDCE3922B233E50084A5E5 /* ClusterAnnotationView.swift */,
+			);
+			path = MapVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,8 +360,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDCDCE3F22B591C80084A5E5 /* String+Extension.swift in Sources */,
 				FDCDCE2722AC2D920084A5E5 /* Pick.swift in Sources */,
 				FDB3A05D22AB197B003FF414 /* LoginModel.swift in Sources */,
+				FDCDCE3D22B58C330084A5E5 /* AppError.swift in Sources */,
 				FDCDCE2D22AC6D970084A5E5 /* UIAlertController+extension.swift in Sources */,
 				FDCDCE3622ADC2140084A5E5 /* LongPressable.swift in Sources */,
 				FDCDCE3222ADB1520084A5E5 /* ListTableViewController.swift in Sources */,

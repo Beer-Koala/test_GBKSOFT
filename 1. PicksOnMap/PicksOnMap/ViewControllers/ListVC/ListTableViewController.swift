@@ -10,9 +10,9 @@ import UIKit
 
 class ListTableViewController: UIViewController {
 
-    static let emptyTableViewText = "Пока нет ни одной точки"
-    static let deletePickText = "Удалить точку?"
-    static let pickCellIdentifier = "pickCell"
+    private enum Constants: String {
+        case pickCellIdentifier = "pickCell"
+    }
 
     var presenter: PicksPresenter!
     @IBOutlet weak var tableView: UITableView!
@@ -59,7 +59,7 @@ extension ListTableViewController: UITableViewDataSource {
             tableView.backgroundView = nil
         } else {
             let noDataLabel: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: tableView.bounds.size.height))
-            noDataLabel.text = ListTableViewController.emptyTableViewText
+            noDataLabel.text = NSLocalizedString(LocalizationKeys.emptyTableViewLocalizationKey.rawValue, comment: String.empty)
             noDataLabel.textColor = UIColor.black
             noDataLabel.textAlignment = .center
             tableView.backgroundView = noDataLabel
@@ -73,7 +73,7 @@ extension ListTableViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewController.pickCellIdentifier, for: indexPath) as? PickTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.pickCellIdentifier.rawValue, for: indexPath) as? PickTableViewCell
             ?? PickTableViewCell()
         let pick = presenter.picks[indexPath.row]
         cell.latitudeLabel.text = pick.coordinate.latitude.description
@@ -98,7 +98,7 @@ extension ListTableViewController: LongPressable {
             let touchPoint = gestureReconizer.location(in: tableView)
             guard let indexPath = tableView.indexPathForRow(at: touchPoint) else { return } // long press on table view but not on a row
 
-            UIAlertController.askToDo(in: self, title: ListTableViewController.deletePickText) { [weak presenter, indexPath] in
+            UIAlertController.askToDo(in: self, title: NSLocalizedString(LocalizationKeys.deletePickLocalizationKey.rawValue, comment: String.empty)) { [weak presenter, indexPath] in
                 presenter?.deletePick(with: indexPath.row)
             }
         }

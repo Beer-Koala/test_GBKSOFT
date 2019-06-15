@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  PicksOnMap
+
+  Created by BeerKoala on 6/16/19.
+  Copyright © 2019 a.kryvchykov. All rights reserved.
+*/
+
+"emptyTableView" = "Пока нет ни одной точки";
+"deletePick" = "Удалить точку?";
+"error" = "Ошибка";
+"title" = "Название";
+"typeTitle" = "Введите название:";

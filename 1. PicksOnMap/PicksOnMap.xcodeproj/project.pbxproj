@@ -28,6 +28,8 @@
 		FDCDCE3A22B233E50084A5E5 /* ClusterAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDCE3922B233E50084A5E5 /* ClusterAnnotationView.swift */; };
 		FDCDCE3D22B58C330084A5E5 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDCE3C22B58C330084A5E5 /* AppError.swift */; };
 		FDCDCE3F22B591C80084A5E5 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDCE3E22B591C80084A5E5 /* String+Extension.swift */; };
+		FDCDCE4422B5A9AC0084A5E5 /* LocalizationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDCE4322B5A9AC0084A5E5 /* LocalizationKeys.swift */; };
+		FDCDCE5122B5AEC60084A5E5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FDCDCE5322B5AEC60084A5E5 /* Localizable.strings */; };
 		FDFC01AF22A9B9D000A8F021 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FDFC01AE22A9B9D000A8F021 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +59,11 @@
 		FDCDCE3922B233E50084A5E5 /* ClusterAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterAnnotationView.swift; sourceTree = "<group>"; };
 		FDCDCE3C22B58C330084A5E5 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		FDCDCE3E22B591C80084A5E5 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		FDCDCE4322B5A9AC0084A5E5 /* LocalizationKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationKeys.swift; sourceTree = "<group>"; };
+		FDCDCE4D22B5AE740084A5E5 /* ru-RU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ru-RU"; path = "ru-RU.lproj/Main.strings"; sourceTree = "<group>"; };
+		FDCDCE4E22B5AE740084A5E5 /* ru-RU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ru-RU"; path = "ru-RU.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		FDCDCE5222B5AEC60084A5E5 /* ru-RU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ru-RU"; path = "ru-RU.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		FDCDCE5422B5B1160084A5E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FDFC01AE22A9B9D000A8F021 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,9 +128,10 @@
 				FDCDCE3B22B5880C0084A5E5 /* Extensions */,
 				FDBDEECB22A9B080007FCBB1 /* Main.storyboard */,
 				FDBDEECE22A9B081007FCBB1 /* Assets.xcassets */,
-				FDBDEED022A9B081007FCBB1 /* LaunchScreen.storyboard */,
+				FDCDCE5522B5B3F40084A5E5 /* Localization */,
 				FDBDEED322A9B081007FCBB1 /* Info.plist */,
 				FDFC01AE22A9B9D000A8F021 /* GoogleService-Info.plist */,
+				FDBDEED022A9B081007FCBB1 /* LaunchScreen.storyboard */,
 			);
 			path = PicksOnMap;
 			sourceTree = "<group>";
@@ -185,6 +193,15 @@
 			path = MapVC;
 			sourceTree = "<group>";
 		};
+		FDCDCE5522B5B3F40084A5E5 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				FDCDCE4322B5A9AC0084A5E5 /* LocalizationKeys.swift */,
+				FDCDCE5322B5AEC60084A5E5 /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -236,6 +253,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"ru-RU",
 			);
 			mainGroup = FDBDEEBB22A9B07F007FCBB1;
 			productRefGroup = FDBDEEC522A9B07F007FCBB1 /* Products */;
@@ -252,6 +270,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDCDCE5122B5AEC60084A5E5 /* Localizable.strings in Resources */,
 				FDBDEED222A9B081007FCBB1 /* LaunchScreen.storyboard in Resources */,
 				FDFC01AF22A9B9D000A8F021 /* GoogleService-Info.plist in Resources */,
 				FDBDEECF22A9B081007FCBB1 /* Assets.xcassets in Resources */,
@@ -361,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDCDCE3F22B591C80084A5E5 /* String+Extension.swift in Sources */,
+				FDCDCE4422B5A9AC0084A5E5 /* LocalizationKeys.swift in Sources */,
 				FDCDCE2722AC2D920084A5E5 /* Pick.swift in Sources */,
 				FDB3A05D22AB197B003FF414 /* LoginModel.swift in Sources */,
 				FDCDCE3D22B58C330084A5E5 /* AppError.swift in Sources */,
@@ -386,6 +406,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				FDBDEECC22A9B080007FCBB1 /* Base */,
+				FDCDCE4D22B5AE740084A5E5 /* ru-RU */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -394,8 +415,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				FDBDEED122A9B081007FCBB1 /* Base */,
+				FDCDCE4E22B5AE740084A5E5 /* ru-RU */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		FDCDCE5322B5AEC60084A5E5 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FDCDCE5222B5AEC60084A5E5 /* ru-RU */,
+				FDCDCE5422B5B1160084A5E5 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -405,6 +436,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -466,6 +498,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

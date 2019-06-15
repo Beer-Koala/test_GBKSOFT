@@ -12,7 +12,9 @@ import FirebaseAuth
 
 class LoginViewController: UIViewController {
 
-    static let identifierToMainTabBarVC = "toMainTabBarVC"
+    private enum Constants: String {
+        case identifierToMainTabBarVC = "toMainTabBarVC"
+    }
 
     @IBOutlet weak var signWithGoogleButton: GIDSignInButton!
     var loginModel: LoginModel!
@@ -27,7 +29,7 @@ class LoginViewController: UIViewController {
 
         Auth.auth().addStateDidChangeListener { _, user in
             if user != nil {
-                self.performSegue(withIdentifier: LoginViewController.identifierToMainTabBarVC, sender: self)
+                self.performSegue(withIdentifier: Constants.identifierToMainTabBarVC.rawValue, sender: self)
             } else {
                 self.dismiss(animated: true, completion: nil)
             }

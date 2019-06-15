@@ -18,6 +18,11 @@ class MapViewController: UIViewController {
         case toCurrentLocation
     }
 
+    enum NumberConstants: Double {
+        case coordinateSpan = 0.1
+        case asyncWait = 0.35
+    }
+
     @IBOutlet weak var mapView: MKMapView!
     var presenter: PicksPresenter!
     var needCenter: NeedCenterState = .none
@@ -41,6 +46,7 @@ class MapViewController: UIViewController {
             needCenter = .toCurrentLocation
         }
         checkLocationAuthorizationStatus()
+        centerIfNeeded()
     }
 
     func checkLocationAuthorizationStatus() {
@@ -57,7 +63,7 @@ class MapViewController: UIViewController {
     }
 
     func centerMap(on coordinate: CLLocationCoordinate2D) {
-        let span = MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
+        let span = MKCoordinateSpan(latitudeDelta: NumberConstants.coordinateSpan.rawValue, longitudeDelta: NumberConstants.coordinateSpan.rawValue)
         mapView.setRegion(MKCoordinateRegion(center: coordinate, span: span), animated: true)
     }
 
@@ -67,7 +73,7 @@ class MapViewController: UIViewController {
             guard let pick = presenter.picks.first(where: { $0.title == pick.title }) else { return }
 
             centerMap(on: pick.coordinate)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + NumberConstants.asyncWait.rawValue) {
                 self.mapView.selectAnnotation(pick, animated: true)
             }
 
@@ -128,7 +134,7 @@ extension MapViewController: MKMapViewDelegate {
         flagAnnotationView.image = image
 
         // Offset the flag annotation so that the flag pole rests on the map coordinate.
-        let offset = CGPoint(x: image.size.width / 2 - 8, y: -(image.size.height / 2) ) // 8 magic numbers
+        let offset = CGPoint(x: image.size.width / 2 - 8, y: -(image.size.height / 2) ) // magic numbers
         flagAnnotationView.centerOffset = offset
         flagAnnotationView.calloutOffset = CGPoint(x: -13, y: 5)
 
@@ -161,7 +167,7 @@ extension MapViewController: Pressable {
     func handleTap(gestureReconizer: UITapGestureRecognizer) {
         if let annotation = (gestureReconizer.view as? MKAnnotationView)?.annotation,
             mapView.selectedAnnotations.contains(where: { $0 === annotation }) {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + NumberConstants.asyncWait.rawValue) {
                 self.mapView.deselectAnnotation(annotation, animated: true)
             }
         }

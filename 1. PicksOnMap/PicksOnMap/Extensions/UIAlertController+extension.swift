@@ -10,12 +10,12 @@ import UIKit
 
 extension UIAlertController {
     class func showAlertWithTextField(in viewController: UIViewController,
-                                      title: String? = TextConstants.typeTitleText.rawValue,
+                                      title: String? = NSLocalizedString(LocalizationKeys.typeTitleLocalizationKey.rawValue, comment: String.empty),
                                       message: String?,
                                       completion: @escaping (String) -> Void) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertController.addTextField { textField in
-            textField.placeholder = TextConstants.titleText.rawValue
+            textField.placeholder = NSLocalizedString(LocalizationKeys.titleLocalizationKey.rawValue, comment: String.empty)
         }
         let confirmAction = UIAlertAction(title: TextConstants.ok.rawValue, style: .default) { [weak alertController] _ in
             guard let alertController = alertController, let text = alertController.textFields?.first?.text else { return }
@@ -44,10 +44,6 @@ extension UIAlertController {
         case cancel = "Cancel"
         case yes = "Да"
         case no = "Нет"
-
-        case error = "Ошибка"
-        case titleText = "Название"
-        case typeTitleText = "Введите название:"
         // swiftlint:enable identifier_name
     }
 }

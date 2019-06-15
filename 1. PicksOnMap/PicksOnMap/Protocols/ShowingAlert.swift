@@ -27,6 +27,6 @@ extension ShowingAlert {
     }
 
     func show(error: AppError) {
-        self.showAlert(with: UIAlertController.TextConstants.error.rawValue, and: error.rawValue)
+        self.showAlert(with: NSLocalizedString(LocalizationKeys.errorLocalizationKey.rawValue, comment: String.empty), and: error.rawValue)
     }
 }

@@ -98,8 +98,10 @@ extension ListTableViewController: LongPressable {
             let touchPoint = gestureReconizer.location(in: tableView)
             guard let indexPath = tableView.indexPathForRow(at: touchPoint) else { return } // long press on table view but not on a row
 
-            UIAlertController.askToDo(in: self, title: NSLocalizedString(LocalizationKeys.deletePickLocalizationKey.rawValue, comment: String.empty)) { [weak presenter, indexPath] in
-                presenter?.deletePick(with: indexPath.row)
+            UIAlertController.askToDo(in: self,
+                                      title: NSLocalizedString(LocalizationKeys.deletePickLocalizationKey.rawValue, comment: String.empty)) {
+                                        [weak presenter, indexPath] in
+                                        presenter?.deletePick(with: indexPath.row)
             }
         }
     }

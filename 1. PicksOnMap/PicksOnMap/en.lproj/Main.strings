@@ -1,0 +1,24 @@
+
+/* Class = "UILabel"; text = "Lontitude"; ObjectID = "2d7-oW-hPU"; */
+"2d7-oW-hPU.text" = "Lontitude";
+
+/* Class = "UIButton"; normalTitle = "Выйти"; ObjectID = "4Nh-Gw-pdK"; */
+"4Nh-Gw-pdK.normalTitle" = "Logout";
+
+/* Class = "UILabel"; text = "PicksOnMap"; ObjectID = "FNu-h2-Mmo"; */
+"FNu-h2-Mmo.text" = "PicksOnMap";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "Pde-SW-erA"; */
+"Pde-SW-erA.text" = "Title";
+
+/* Class = "UITabBarItem"; title = "Карта"; ObjectID = "UjM-sd-NJu"; */
+"UjM-sd-NJu.title" = "Map";
+
+/* Class = "UILabel"; text = "Latitude"; ObjectID = "V87-bT-TWF"; */
+"V87-bT-TWF.text" = "Latitude";
+
+/* Class = "UITabBarItem"; title = "Список"; ObjectID = "fWd-Eu-qAs"; */
+"fWd-Eu-qAs.title" = "List";
+
+/* Class = "UITabBarItem"; title = "Профиль"; ObjectID = "shb-F2-Q1D"; */
+"shb-F2-Q1D.title" = "Profile";

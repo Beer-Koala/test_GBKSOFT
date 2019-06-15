@@ -136,7 +136,7 @@ extension MapViewController: MKMapViewDelegate {
         // Offset the flag annotation so that the flag pole rests on the map coordinate.
         let offset = CGPoint(x: image.size.width / 2 - 8, y: -(image.size.height / 2) ) // magic numbers
         flagAnnotationView.centerOffset = offset
-        flagAnnotationView.calloutOffset = CGPoint(x: -13, y: 5)
+        flagAnnotationView.calloutOffset = CGPoint(x: -13, y: 5) // magic numbers
 
         addTapGestureRecognizer(to: flagAnnotationView)
 
@@ -154,7 +154,7 @@ extension MapViewController: MKMapViewDelegate {
 extension MapViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         show(error: AppError.locationError)
-        //requestLocation() //!!! I think app dont need this
+        //requestLocation() // I think app dont need this
     }
 
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {

@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		FDCDCE6522B5BA3F0084A5E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDCE6422B5BA3F0084A5E5 /* AppDelegate.swift */; };
-		FDCDCE6722B5BA3F0084A5E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDCE6622B5BA3F0084A5E5 /* ViewController.swift */; };
+		FDCDCE6722B5BA3F0084A5E5 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDCE6622B5BA3F0084A5E5 /* RegisterViewController.swift */; };
 		FDCDCE6A22B5BA3F0084A5E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDCDCE6822B5BA3F0084A5E5 /* Main.storyboard */; };
 		FDCDCE6C22B5BA410084A5E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDCDCE6B22B5BA410084A5E5 /* Assets.xcassets */; };
 		FDCDCE6F22B5BA410084A5E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDCDCE6D22B5BA410084A5E5 /* LaunchScreen.storyboard */; };
+		FDCDCE7822B823460084A5E5 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FDCDCE7622B823220084A5E5 /* Poppins-Bold.ttf */; };
+		FDCDCE7922B8234A0084A5E5 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FDCDCE7722B823220084A5E5 /* Poppins-Regular.ttf */; };
+		FDCDCE7B22B826A00084A5E5 /* UIButtonCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDCE7A22B826A00084A5E5 /* UIButtonCustom.swift */; };
+		FDCDCE7D22B82A3C0084A5E5 /* UITextFieldCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDCE7C22B82A3C0084A5E5 /* UITextFieldCustom.swift */; };
+		FDCDCE8122B830F20084A5E5 /* UILabelCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDCE8022B830F20084A5E5 /* UILabelCustom.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FDCDCE6122B5BA3F0084A5E5 /* LayoutTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LayoutTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCDCE6422B5BA3F0084A5E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FDCDCE6622B5BA3F0084A5E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FDCDCE6622B5BA3F0084A5E5 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		FDCDCE6922B5BA3F0084A5E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FDCDCE6B22B5BA410084A5E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDCDCE6E22B5BA410084A5E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDCDCE7022B5BA410084A5E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDCDCE7622B823220084A5E5 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		FDCDCE7722B823220084A5E5 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		FDCDCE7A22B826A00084A5E5 /* UIButtonCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonCustom.swift; sourceTree = "<group>"; };
+		FDCDCE7C22B82A3C0084A5E5 /* UITextFieldCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldCustom.swift; sourceTree = "<group>"; };
+		FDCDCE8022B830F20084A5E5 /* UILabelCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelCustom.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +65,16 @@
 			isa = PBXGroup;
 			children = (
 				FDCDCE6422B5BA3F0084A5E5 /* AppDelegate.swift */,
-				FDCDCE6622B5BA3F0084A5E5 /* ViewController.swift */,
+				FDCDCE6622B5BA3F0084A5E5 /* RegisterViewController.swift */,
 				FDCDCE6822B5BA3F0084A5E5 /* Main.storyboard */,
+				FDCDCE7A22B826A00084A5E5 /* UIButtonCustom.swift */,
+				FDCDCE8022B830F20084A5E5 /* UILabelCustom.swift */,
+				FDCDCE7C22B82A3C0084A5E5 /* UITextFieldCustom.swift */,
 				FDCDCE6B22B5BA410084A5E5 /* Assets.xcassets */,
 				FDCDCE6D22B5BA410084A5E5 /* LaunchScreen.storyboard */,
 				FDCDCE7022B5BA410084A5E5 /* Info.plist */,
+				FDCDCE7622B823220084A5E5 /* Poppins-Bold.ttf */,
+				FDCDCE7722B823220084A5E5 /* Poppins-Regular.ttf */,
 			);
 			path = LayoutTest;
 			sourceTree = "<group>";
@@ -122,6 +137,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDCDCE7922B8234A0084A5E5 /* Poppins-Regular.ttf in Resources */,
+				FDCDCE7822B823460084A5E5 /* Poppins-Bold.ttf in Resources */,
 				FDCDCE6F22B5BA410084A5E5 /* LaunchScreen.storyboard in Resources */,
 				FDCDCE6C22B5BA410084A5E5 /* Assets.xcassets in Resources */,
 				FDCDCE6A22B5BA3F0084A5E5 /* Main.storyboard in Resources */,
@@ -135,8 +152,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDCDCE6722B5BA3F0084A5E5 /* ViewController.swift in Sources */,
+				FDCDCE8122B830F20084A5E5 /* UILabelCustom.swift in Sources */,
+				FDCDCE6722B5BA3F0084A5E5 /* RegisterViewController.swift in Sources */,
 				FDCDCE6522B5BA3F0084A5E5 /* AppDelegate.swift in Sources */,
+				FDCDCE7B22B826A00084A5E5 /* UIButtonCustom.swift in Sources */,
+				FDCDCE7D22B82A3C0084A5E5 /* UITextFieldCustom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

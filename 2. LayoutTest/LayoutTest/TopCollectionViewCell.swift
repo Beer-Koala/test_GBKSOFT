@@ -1,5 +1,5 @@
 //
-//  FirstCollectionViewCell.swift
+//  TopCollectionViewCell.swift
 //  LayoutTest
 //
 //  Created by BeerKoala on 6/18/19.
@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class FirstCollectionViewCell: UICollectionViewCell {
+class TopCollectionViewCell: UICollectionViewCell {
 
     @IBInspectable var cornerRadius: CGFloat = 0 {
         didSet {

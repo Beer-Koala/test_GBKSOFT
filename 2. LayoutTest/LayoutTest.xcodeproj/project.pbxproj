@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD6F352422B8C46F00C4720D /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6F352322B8C46F00C4720D /* DashboardViewController.swift */; };
+		FD6F352622B8C55B00C4720D /* FirstCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6F352522B8C55A00C4720D /* FirstCollectionViewCell.swift */; };
+		FD6F352822B8CBCD00C4720D /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FD6F352722B8CBC300C4720D /* Poppins-Light.ttf */; };
 		FDCDCE6522B5BA3F0084A5E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDCE6422B5BA3F0084A5E5 /* AppDelegate.swift */; };
 		FDCDCE6722B5BA3F0084A5E5 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCDCE6622B5BA3F0084A5E5 /* RegisterViewController.swift */; };
 		FDCDCE6A22B5BA3F0084A5E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDCDCE6822B5BA3F0084A5E5 /* Main.storyboard */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FD6F352322B8C46F00C4720D /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		FD6F352522B8C55A00C4720D /* FirstCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCollectionViewCell.swift; sourceTree = "<group>"; };
+		FD6F352722B8CBC300C4720D /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
 		FDCDCE6122B5BA3F0084A5E5 /* LayoutTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LayoutTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCDCE6422B5BA3F0084A5E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDCDCE6622B5BA3F0084A5E5 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -66,7 +72,9 @@
 			children = (
 				FDCDCE6422B5BA3F0084A5E5 /* AppDelegate.swift */,
 				FDCDCE6622B5BA3F0084A5E5 /* RegisterViewController.swift */,
+				FD6F352322B8C46F00C4720D /* DashboardViewController.swift */,
 				FDCDCE6822B5BA3F0084A5E5 /* Main.storyboard */,
+				FD6F352522B8C55A00C4720D /* FirstCollectionViewCell.swift */,
 				FDCDCE7A22B826A00084A5E5 /* UIButtonCustom.swift */,
 				FDCDCE8022B830F20084A5E5 /* UILabelCustom.swift */,
 				FDCDCE7C22B82A3C0084A5E5 /* UITextFieldCustom.swift */,
@@ -75,6 +83,7 @@
 				FDCDCE7022B5BA410084A5E5 /* Info.plist */,
 				FDCDCE7622B823220084A5E5 /* Poppins-Bold.ttf */,
 				FDCDCE7722B823220084A5E5 /* Poppins-Regular.ttf */,
+				FD6F352722B8CBC300C4720D /* Poppins-Light.ttf */,
 			);
 			path = LayoutTest;
 			sourceTree = "<group>";
@@ -137,6 +146,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD6F352822B8CBCD00C4720D /* Poppins-Light.ttf in Resources */,
 				FDCDCE7922B8234A0084A5E5 /* Poppins-Regular.ttf in Resources */,
 				FDCDCE7822B823460084A5E5 /* Poppins-Bold.ttf in Resources */,
 				FDCDCE6F22B5BA410084A5E5 /* LaunchScreen.storyboard in Resources */,
@@ -152,7 +162,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD6F352622B8C55B00C4720D /* FirstCollectionViewCell.swift in Sources */,
 				FDCDCE8122B830F20084A5E5 /* UILabelCustom.swift in Sources */,
+				FD6F352422B8C46F00C4720D /* DashboardViewController.swift in Sources */,
 				FDCDCE6722B5BA3F0084A5E5 /* RegisterViewController.swift in Sources */,
 				FDCDCE6522B5BA3F0084A5E5 /* AppDelegate.swift in Sources */,
 				FDCDCE7B22B826A00084A5E5 /* UIButtonCustom.swift in Sources */,

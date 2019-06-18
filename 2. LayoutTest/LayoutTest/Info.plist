@@ -6,6 +6,7 @@
 	<array>
 		<string>Poppins-Bold.ttf</string>
 		<string>Poppins-Regular.ttf</string>
+		<string>Poppins-Light.ttf</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>

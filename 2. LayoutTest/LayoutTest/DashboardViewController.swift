@@ -35,10 +35,10 @@ extension DashboardViewController: UICollectionViewDataSource {
 
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return 4
     }
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
+        return 1
     }
 }

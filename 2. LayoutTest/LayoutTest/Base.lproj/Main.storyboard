@@ -19,6 +19,9 @@
         <array key="Poppins-Regular.ttf">
             <string>Poppins-Regular</string>
         </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Register View Controller-->
@@ -280,22 +283,89 @@
                                     <outlet property="dataSource" destination="o1c-hR-2EV" id="p6v-hq-3WW"/>
                                 </connections>
                             </collectionView>
-                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mQT-i4-ViW">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="37" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mQT-i4-ViW">
                                 <rect key="frame" x="0.0" y="428" width="375" height="350"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="650-nL-pri">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="650-nL-pri" customClass="BottomTableViewCell" customModule="LayoutTest" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="37"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="650-nL-pri" id="ez1-0U-hpM">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="37"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="January 01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDI-fa-Lzh">
+                                                    <rect key="frame" x="30" y="9" width="68" height="19"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$2,029" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndM-Mm-frI">
+                                                    <rect key="frame" x="296" y="9" width="42" height="19"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins SemiBold" pointSize="13"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q8M-18-Rlc">
+                                                    <rect key="frame" x="12.666666666666666" y="21" width="0.66666666666666607" height="16"/>
+                                                    <color key="backgroundColor" red="0.27450980390000002" green="0.28627450980000002" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="16" id="DUV-2G-EWQ"/>
+                                                        <constraint firstAttribute="width" constant="0.5" id="igz-Uv-T1g"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wXg-53-Ns8">
+                                                    <rect key="frame" x="12.666666666666666" y="0.0" width="0.66666666666666607" height="16"/>
+                                                    <color key="backgroundColor" red="0.27450980392156865" green="0.28627450980392155" blue="0.396078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="16" id="1zc-eU-1vn"/>
+                                                        <constraint firstAttribute="width" constant="0.5" id="900-lm-jdg"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Js0-OR-t7Y" customClass="UIViewCustom" customModule="LayoutTest" customModuleProvider="target">
+                                                    <rect key="frame" x="10" y="15.666666666666664" width="6" height="6"/>
+                                                    <color key="backgroundColor" red="0.12156862745098039" green="0.55686274509803924" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="6" id="J61-CD-kab"/>
+                                                        <constraint firstAttribute="width" constant="6" id="SKT-er-ui4"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="VDI-fa-Lzh" firstAttribute="centerY" secondItem="ez1-0U-hpM" secondAttribute="centerY" id="67Q-25-Pbo"/>
+                                                <constraint firstItem="Js0-OR-t7Y" firstAttribute="centerY" secondItem="ez1-0U-hpM" secondAttribute="centerY" id="9Zf-Lb-g9G"/>
+                                                <constraint firstItem="Q8M-18-Rlc" firstAttribute="centerX" secondItem="Js0-OR-t7Y" secondAttribute="centerX" id="Rss-Pf-7DK"/>
+                                                <constraint firstItem="wXg-53-Ns8" firstAttribute="centerX" secondItem="Js0-OR-t7Y" secondAttribute="centerX" id="gfe-Gx-c75"/>
+                                                <constraint firstItem="VDI-fa-Lzh" firstAttribute="leading" secondItem="Js0-OR-t7Y" secondAttribute="trailing" constant="14" id="l8z-0v-OAA"/>
+                                                <constraint firstItem="ndM-Mm-frI" firstAttribute="centerY" secondItem="ez1-0U-hpM" secondAttribute="centerY" id="mKX-gV-71z"/>
+                                                <constraint firstItem="Js0-OR-t7Y" firstAttribute="leading" secondItem="ez1-0U-hpM" secondAttribute="leading" constant="10" id="oPF-JR-Wsg"/>
+                                                <constraint firstAttribute="trailing" secondItem="ndM-Mm-frI" secondAttribute="trailing" constant="37" id="tiM-LY-F36"/>
+                                                <constraint firstItem="ndM-Mm-frI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="VDI-fa-Lzh" secondAttribute="trailing" constant="10" id="xDU-UN-Lb6"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="wXg-53-Ns8" firstAttribute="top" secondItem="650-nL-pri" secondAttribute="top" id="cNi-zN-rI5"/>
+                                            <constraint firstAttribute="bottom" secondItem="Q8M-18-Rlc" secondAttribute="bottom" id="g8f-6m-hmC"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="bottomLeftLine" destination="Q8M-18-Rlc" id="nmH-C4-r3M"/>
+                                            <outlet property="dateLabel" destination="VDI-fa-Lzh" id="0hm-bc-0pN"/>
+                                            <outlet property="sumLabel" destination="ndM-Mm-frI" id="JzK-SJ-cLT"/>
+                                            <outlet property="topLeftLine" destination="wXg-53-Ns8" id="zZw-PT-x8j"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="o1c-hR-2EV" id="agq-Jh-bFv"/>
+                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily Sales Results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sfk-rB-riE">
                                 <rect key="frame" x="29" y="389" width="136" height="21"/>
@@ -326,11 +396,13 @@
                             <constraint firstItem="z4L-bL-wVW" firstAttribute="trailing" secondItem="TgY-4K-Bzf" secondAttribute="trailing" constant="29" id="Kxv-Hs-SGk"/>
                             <constraint firstItem="Qwk-Gc-LLs" firstAttribute="leading" secondItem="z4L-bL-wVW" secondAttribute="leading" id="LnW-id-b1F"/>
                             <constraint firstItem="3uZ-US-h0d" firstAttribute="leading" secondItem="Sfk-rB-riE" secondAttribute="leading" id="MRe-V3-kGm"/>
+                            <constraint firstItem="TgY-4K-Bzf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3uZ-US-h0d" secondAttribute="trailing" constant="10" id="NRS-uV-Orf"/>
                             <constraint firstItem="Z3b-jO-UXu" firstAttribute="leading" secondItem="muO-vN-gWx" secondAttribute="trailing" constant="11" id="PDN-bJ-Lem"/>
                             <constraint firstItem="qAp-uO-R8C" firstAttribute="trailing" secondItem="QYG-FT-Yfk" secondAttribute="trailing" constant="2" id="S3X-pc-exq"/>
                             <constraint firstItem="QYG-FT-Yfk" firstAttribute="top" secondItem="ctI-9h-kKp" secondAttribute="top" constant="49" id="UmO-bq-G6q"/>
                             <constraint firstItem="QYG-FT-Yfk" firstAttribute="top" secondItem="qAp-uO-R8C" secondAttribute="bottom" constant="-9" id="XbW-uY-quQ"/>
                             <constraint firstItem="z4L-bL-wVW" firstAttribute="trailing" secondItem="grh-fe-FeW" secondAttribute="trailing" constant="29" id="bws-89-RTU"/>
+                            <constraint firstItem="TgY-4K-Bzf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Sfk-rB-riE" secondAttribute="trailing" constant="10" id="cIH-T2-ysn"/>
                             <constraint firstItem="z4L-bL-wVW" firstAttribute="trailing" secondItem="Cbb-eb-p20" secondAttribute="trailing" id="eNy-1U-hU6"/>
                             <constraint firstAttribute="top" secondItem="muO-vN-gWx" secondAttribute="top" constant="-50" id="eqe-Qq-z8X"/>
                             <constraint firstItem="grh-fe-FeW" firstAttribute="leading" secondItem="QYG-FT-Yfk" secondAttribute="trailing" constant="21" id="lBL-xg-SYB"/>

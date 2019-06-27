@@ -59,6 +59,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD23184D22C559B0000CA2BC /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				FDCDCE7A22B826A00084A5E5 /* UIButtonCustom.swift */,
+				FD6F352B22B92B5600C4720D /* UIViewCustom.swift */,
+				FDCDCE8022B830F20084A5E5 /* UILabelCustom.swift */,
+				FDCDCE7C22B82A3C0084A5E5 /* UITextFieldCustom.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		FD23184E22C559D1000CA2BC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FDCDCE6622B5BA3F0084A5E5 /* RegisterViewController.swift */,
+				FD6F352322B8C46F00C4720D /* DashboardViewController.swift */,
+				FD23184F22C559EB000CA2BC /* Cells */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FD23184F22C559EB000CA2BC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FD6F352522B8C55A00C4720D /* TopCollectionViewCell.swift */,
+				FD6F352F22B92EC200C4720D /* BottomTableViewCell.swift */,
+				FD6F352922B8DDDF00C4720D /* MiddleCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		FD23185022C559FD000CA2BC /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FDCDCE7622B823220084A5E5 /* Poppins-Bold.ttf */,
+				FDCDCE7722B823220084A5E5 /* Poppins-Regular.ttf */,
+				FD6F352722B8CBC300C4720D /* Poppins-Light.ttf */,
+				FD6F352D22B92BF900C4720D /* Poppins-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		FDCDCE5822B5BA3F0084A5E5 = {
 			isa = PBXGroup;
 			children = (
@@ -78,24 +120,14 @@
 		FDCDCE6322B5BA3F0084A5E5 /* LayoutTest */ = {
 			isa = PBXGroup;
 			children = (
-				FDCDCE6422B5BA3F0084A5E5 /* AppDelegate.swift */,
-				FDCDCE6622B5BA3F0084A5E5 /* RegisterViewController.swift */,
-				FD6F352322B8C46F00C4720D /* DashboardViewController.swift */,
-				FDCDCE6822B5BA3F0084A5E5 /* Main.storyboard */,
-				FD6F352522B8C55A00C4720D /* TopCollectionViewCell.swift */,
-				FD6F352F22B92EC200C4720D /* BottomTableViewCell.swift */,
-				FDCDCE7A22B826A00084A5E5 /* UIButtonCustom.swift */,
-				FD6F352B22B92B5600C4720D /* UIViewCustom.swift */,
-				FDCDCE8022B830F20084A5E5 /* UILabelCustom.swift */,
-				FD6F352922B8DDDF00C4720D /* MiddleCollectionViewCell.swift */,
-				FDCDCE7C22B82A3C0084A5E5 /* UITextFieldCustom.swift */,
-				FDCDCE6B22B5BA410084A5E5 /* Assets.xcassets */,
 				FDCDCE6D22B5BA410084A5E5 /* LaunchScreen.storyboard */,
+				FDCDCE6422B5BA3F0084A5E5 /* AppDelegate.swift */,
+				FDCDCE6822B5BA3F0084A5E5 /* Main.storyboard */,
+				FD23184E22C559D1000CA2BC /* ViewControllers */,
+				FD23184D22C559B0000CA2BC /* CustomView */,
+				FDCDCE6B22B5BA410084A5E5 /* Assets.xcassets */,
 				FDCDCE7022B5BA410084A5E5 /* Info.plist */,
-				FDCDCE7622B823220084A5E5 /* Poppins-Bold.ttf */,
-				FDCDCE7722B823220084A5E5 /* Poppins-Regular.ttf */,
-				FD6F352722B8CBC300C4720D /* Poppins-Light.ttf */,
-				FD6F352D22B92BF900C4720D /* Poppins-SemiBold.ttf */,
+				FD23185022C559FD000CA2BC /* Fonts */,
 			);
 			path = LayoutTest;
 			sourceTree = "<group>";
